@@ -34,6 +34,13 @@ public class CarRentalShop {
 		RentalVehicle carNo2 = new Minivan("serena", 30000);
 		RentalVehicle truck = new Truck("fuso", 50000);
 		
+		vehicleList.add(mira);
+		vehicleList.add(alphard);
+		vehicleList.add(carNo1);
+		vehicleList.add(carNo2);
+		vehicleList.add(truck);
+		
+		
 		// 演習２．１：オブジェクトのキャスト、instanceof
 		//   Truckだけ特別なレンタル条件があります（会社にのみ貸し出し可能）
 		//   TruckクラスのrentTruckメソッドを実装してください
