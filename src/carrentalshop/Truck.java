@@ -33,6 +33,14 @@ public class Truck extends RentalVehicle {
 	 */
 	public void rentTruck(String companyName, String driverName, int runDistanceKm) {
 		// 
+		if(companyName == null) {
+			this.rentVehicle(driverName, runDistanceKm);
+			return;
+		}
+		addRenterToHistoryList(driverName);
+		setMilageKm(getMilageKm() + runDistanceKm);
+		setCompanyName(companyName);
+		return;
 	}
 	
 }
