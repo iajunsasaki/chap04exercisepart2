@@ -19,6 +19,9 @@ public class CarRentalShop {
 		//   ２つのオブジェクトに対して「車を借りる」ことができるようにrentVehicleメソッドを呼び出してみてください
 		CompactCar mira = new CompactCar("mira", 10000);
 		Minivan alphard = new Minivan("alphard", 2000);
+		
+		mira.rentVehicle("島田晴伎", 50);
+		alphard.rentVehicle("小泉純一郎", 1000);
 
 		// 演習１．２：さて、今度は車のリストが準備します
 		//   ①mira, alphard, carNo1, carNo2の車両オブジェクトをvehicleListに追加してください
