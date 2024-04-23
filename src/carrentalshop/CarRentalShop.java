@@ -33,12 +33,16 @@ public class CarRentalShop {
 		RentalVehicle carNo1 = new CompactCar("alto", 2000);
 		RentalVehicle carNo2 = new Minivan("serena", 30000);
 		RentalVehicle truck = new Truck("fuso", 50000);
+		RentalVehicle ecoCar1 = new HybridCar("sienta", 8000);
+		RentalVehicle ecoCar2 = new HybridCar("puriusu", 1000);
 		
 		vehicleList.add(mira);
 		vehicleList.add(alphard);
 		vehicleList.add(carNo1);
 		vehicleList.add(carNo2);
 		vehicleList.add(truck);
+		vehicleList.add(ecoCar1);
+		vehicleList.add(ecoCar2);
 		
 		for (RentalVehicle vehicle : vehicleList) {
 			if(vehicle instanceof Truck) {
