@@ -8,6 +8,8 @@ public class Minivan extends RentalVehicle {
 	
 	@Override
 	public void rentVehicle(String renterName, int runDistanceKm) {
+		addRenterToHistoryList(renterName);
+		setMilageKm(getMilageKm() + runDistanceKm);
 	}
 
 }
