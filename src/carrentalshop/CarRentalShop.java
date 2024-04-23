@@ -46,11 +46,16 @@ public class CarRentalShop {
 		
 		for (RentalVehicle vehicle : vehicleList) {
 			if(vehicle instanceof Truck) {
-				((Truck) vehicle).rentTruck("company", null, 0);
+				((Truck) vehicle).rentTruck("company", "渋井丸拓男", 24300);
 			} else {
-				vehicle.rentVehicle(null, 0);
+				vehicle.rentVehicle("Michel Jackson", 1000);
+				System.out.println(vehicle.getVehicleName()+" is rent!");
 			}
 		}	
+		
+		((Truck) truck).rentTruck(null,null,0);
+		
+		System.out.println(alphard.getRenterHistoryList());
 		
 		// 演習２．１：オブジェクトのキャスト、instanceof
 		//   Truckだけ特別なレンタル条件があります（会社にのみ貸し出し可能）
@@ -78,6 +83,9 @@ public class CarRentalShop {
 			vehicle.regularCheckup("整備士１", "車両：" + vehicle.getVehicleName() + " " + vehicle.getMaintenanceRecord());
 		}
 
+		for (IMaintainableVehicle vehicle : maintainanceVehicles) {
+			System.out.println(vehicle.getMaintenanceRecord());
+		}
 		// ワンモアマイル１：自分が書いたコードが正しく動いているか確認するためのSystem.out.println()を
 		//   要所要所に埋め込み，不具合が無いかを確かめてください。
 	}
