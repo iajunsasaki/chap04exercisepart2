@@ -40,6 +40,9 @@ public class CarRentalShop {
 		vehicleList.add(carNo2);
 		vehicleList.add(truck);
 		
+		for (RentalVehicle vehicle : vehicleList) {
+			vehicle.rentVehicle(null, 0);
+		}
 		
 		// 演習２．１：オブジェクトのキャスト、instanceof
 		//   Truckだけ特別なレンタル条件があります（会社にのみ貸し出し可能）
