@@ -8,12 +8,34 @@ import java.util.ArrayList;
 public abstract class RentalVehicle implements IMaintainableVehicle {
 	/** 車両名称 */
 	private String vehicleName;
-
+	
 	/** 走行距離Km */
 	private int milageKm;
 
+	public int getMilageKm() {
+		return milageKm;
+	}
+
+	public void setMilageKm(int milageKm) {
+		this.milageKm = milageKm;
+	}
+
 	/** 借りた人の名前履歴 */
 	private ArrayList<String> renterHistoryList = new ArrayList<String>();
+	
+	public ArrayList<String> getRenterHistoryList() {
+		return renterHistoryList;
+	}
+
+	// ArrayListを丸ごと渡してsetすることがあっていいのか？　
+//	public void setRenterHistoryList(ArrayList<String> renterHistoryList) {
+//		this.renterHistoryList = renterHistoryList;
+//	}
+
+	// 人を追加するメソッドを勝手に定義
+	public void addRenterToHistoryList(String Renter) {
+		this.renterHistoryList.add(Renter);
+	}
 	
 	private String maintenanceNote;
 
@@ -39,6 +61,12 @@ public abstract class RentalVehicle implements IMaintainableVehicle {
 	public String getVehicleName() {
 		return this.vehicleName;
 	}
+	
+	public void setVehicleName(String newName) {
+		this.vehicleName = newName;
+	}
+	
+	
 	
 	@Override
 	public void regularCheckup(String mechanic, String note) {
