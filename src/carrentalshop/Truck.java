@@ -7,6 +7,14 @@ public class Truck extends RentalVehicle {
 	/** 貸し出し相手の会社 */
 	private String companyName;
 	
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
 	public Truck(String name, int milage) {
 		super(name, milage);
 	}
